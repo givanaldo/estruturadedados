@@ -52,10 +52,10 @@ public class Main {
 */
 
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Tamanho do vetor: ");
+        System.out.print("Tamanho do vetor: ");
         int tamanho = teclado.nextInt();
 
-        int[] numeros = new int[tamanho];
+        int numeros[] = new int[tamanho];
         
         for (int i=0; i<numeros.length; i++) {
             System.out.println("Elemento " + i + ": ");
@@ -64,6 +64,10 @@ public class Main {
         
         for (int i=0; i<numeros.length; i++) {
             System.out.println("-- " + numeros[i]);
+        }
+
+        for (int num : numeros) {
+            System.out.println("-- " + num);
         }
 
     }
