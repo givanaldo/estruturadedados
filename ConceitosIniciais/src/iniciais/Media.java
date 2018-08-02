@@ -10,17 +10,17 @@ public class Media {
         Scanner teclado = new Scanner(System.in);
         
         for (int i=0; i<notas.length; i++) {
-            System.out.println("Nota " + (i+1) + ": ");
+            System.out.printf("Nota %d: ", (i+1));
             notas[i] = teclado.nextDouble();
             media += notas[i];
         }
         media /= 4;
         
-        System.out.println("NOTAS: ");
+        System.out.printf("NOTAS: ");
         for (double nota : notas) {
             System.out.printf("%.1f  ", nota);
         }
-        System.out.printf("Média = %.1f \n", media);
+        System.out.printf("\nMédia = %.1f \n", media);
     }
     
 }
