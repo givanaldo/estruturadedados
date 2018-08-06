@@ -1,8 +1,9 @@
 package iniciais;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
-public class Media {
+public class MediaJOptionPane {
 
     public static void main(String[] args) {
 
@@ -11,8 +12,9 @@ public class Media {
         Scanner teclado = new Scanner(System.in);
 
         for (int i = 0; i < notas.length; i++) {
-            System.out.printf("Nota %d: ", (i + 1));
-            notas[i] = teclado.nextDouble();
+            //System.out.printf("Nota %d: ", (i + 1));
+            //notas[i] = teclado.nextDouble();
+            notas[i] = Double.parseDouble(JOptionPane.showInputDialog("Nota "+ (i+1) + ": ", "digite uma nota"));
             media += notas[i];
         }
         media /= 4;
@@ -21,7 +23,13 @@ public class Media {
         for (double nota : notas) {
             System.out.printf("%.1f  ", nota);
         }
-        System.out.printf("\nMédia = %.1f \n", media);
+        //System.out.printf("\nMédia = %.1f \n", media);
+        JOptionPane.showMessageDialog(null, 
+                "Média = " + String.format("%.1f", media),
+                "Média Aritmética",
+                JOptionPane.INFORMATION_MESSAGE);
+        
+        
 
         if (media >= 6.0) {
             System.out.println("Aprovado.");
