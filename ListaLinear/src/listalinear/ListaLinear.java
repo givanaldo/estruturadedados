@@ -28,7 +28,16 @@ public class ListaLinear {
     }
     
     public void inserir(int posicao, Pessoa pessoa) {
-
+        if (indice == tamMax) 
+            System.out.println("Lista cheia");
+        else {
+            if (posicao < indice) {
+                for (int i=indice-1; i>=posicao; i--)
+                    lista[i+1] = lista[i];
+                lista[posicao] = pessoa;
+                indice++;
+            }
+        }
     }
     
     public Pessoa recuperar(int posicao) {
