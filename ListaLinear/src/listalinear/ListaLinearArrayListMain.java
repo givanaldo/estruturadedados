@@ -12,16 +12,18 @@ public class ListaLinearArrayListMain {
         Pessoa gabriel = new Pessoa("Gabriel", "5555-5555",  "gabriel@uol.com.br");
                 
         ArrayList<Pessoa> alunos = new ArrayList<>();
-        alunos.inserir(maria);
-        alunos.inserir(joao);
-        alunos.inserir(gabriel);
+        alunos.add(maria);
+        alunos.add(joao);
+        alunos.add(gabriel);
         
-        alunos.listarTodos();
+        for (Pessoa aluno : alunos)
+            System.out.println(aluno.toString());
         System.out.println("");
         
-        alunos.inserir(new Pessoa("José", "2222-2222", "jose@bol.com.br"));
-        alunos.inserir(1, new Pessoa("Alex", "3201-2012", "alex@bol.com.br"));
-        alunos.listarTodos();
+        alunos.add(new Pessoa("José", "2222-2222", "jose@bol.com.br"));
+        alunos.add(1, new Pessoa("Alex", "3201-2012", "alex@bol.com.br"));
+        for (Pessoa aluno : alunos)
+            System.out.println(aluno.toString());
     }
     
 }
