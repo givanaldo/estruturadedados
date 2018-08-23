@@ -15,7 +15,6 @@ public class ListaLinearArrayListMain {
         alunos.add(maria);
         alunos.add(joao);
         alunos.add(gabriel);
-        
         for (Pessoa aluno : alunos)
             System.out.println(aluno.toString());
         System.out.println("");
