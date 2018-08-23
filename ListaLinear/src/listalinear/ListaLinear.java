@@ -1,9 +1,22 @@
 package listalinear;
 
 public class ListaLinear {
-    private int tamMax = 10;
-    private int indice = 0;
-    private Pessoa lista[] = new Pessoa[tamMax];
+    private int tamMax;
+    private int indice;
+    private Pessoa lista[];
+
+    public ListaLinear() {
+        this.tamMax = 10;
+        this.indice = 0;
+        this.lista = new Pessoa[this.tamMax];
+    }
+
+    public ListaLinear(int tamMax) {
+        this.tamMax = tamMax;
+        this.indice = 0;
+        this.lista = new Pessoa[this.tamMax];
+
+    }
     
     public void inserir(Pessoa pessoa) {
         if (indice == tamMax) 
@@ -15,7 +28,7 @@ public class ListaLinear {
     }
     
     public void inserir(int posicao, Pessoa pessoa) {
-        
+
     }
     
     public Pessoa recuperar(int posicao) {
@@ -31,11 +44,11 @@ public class ListaLinear {
     }
     
     public int tamanho() {
-        return 0;
+        return indice;
     }
     
     public void listarTodos() {
-        for (int i=0; i<tamMax; i++)
+        for (int i=0; i<tamanho(); i++)
             System.out.println(lista[i].toString());
-    }
+    }    
 }

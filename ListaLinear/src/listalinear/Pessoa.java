@@ -1,11 +1,15 @@
 package listalinear;
 
 public class Pessoa {
-    private String nome = "";
-    private String telefone = "xxxx-xxxx";
-    private String email = "seuemail@email.com.br";
+
+    private String nome;
+    private String telefone;
+    private String email;
 
     public Pessoa() {
+        this.nome = "seu nome";
+        this.telefone = "xxxx-xxxx";
+        this.email = "seuemail@email.com.br";
     }
 
     public Pessoa(String nome, String telefone, String email) {
@@ -14,7 +18,7 @@ public class Pessoa {
         this.email = email;
     }
 
-        public String getNome() {
+    public String getNome() {
         return nome;
     }
 
@@ -42,6 +46,5 @@ public class Pessoa {
     public String toString() {
         return "nome=" + nome + ", telefone=" + telefone + ", email=" + email;
     }
-    
-    
+
 }
