@@ -1,17 +1,17 @@
 package listalinear;
 
-public class ListaLinear {
+public class ListaContinua {
     private int tamMax;
     private int indice;
     private Pessoa lista[];
 
-    public ListaLinear() {
+    public ListaContinua() {
         this.tamMax = 10;
         this.indice = 0;
         this.lista = new Pessoa[this.tamMax];
     }
 
-    public ListaLinear(int tamMax) {
+    public ListaContinua(int tamMax) {
         this.tamMax = tamMax;
         this.indice = 0;
         this.lista = new Pessoa[this.tamMax];
