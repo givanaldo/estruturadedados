@@ -24,6 +24,10 @@ public class ListaEncadeada {
         
     }
     
+    public void remover() {
+        
+    }
+    
     public void listarTodos() {
         Celula aux = primeira;
         while (aux != null) {
