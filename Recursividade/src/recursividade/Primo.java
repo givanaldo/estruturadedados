@@ -18,7 +18,7 @@ public class Primo {
 
     public static void main(String[] args) {
         int n = 21;
-	System.out.println(éprimo(n));
+        System.out.println(éprimo(n));
     }
 
 }
