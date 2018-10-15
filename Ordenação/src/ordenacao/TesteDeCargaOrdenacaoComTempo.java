@@ -6,7 +6,7 @@ import java.util.Collections;
 public class TesteDeCargaOrdenacaoComTempo {
 
     public static void main(String[] args) {
-        int numElementos = 1000000;
+        int numElementos = 10000;
         ArrayList<Integer> numeros = new ArrayList<>();
 
         // sequência aleatória
