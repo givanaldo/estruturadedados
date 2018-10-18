@@ -18,6 +18,7 @@ public class TesteDeCargaOrdenacaoComTempo {
         // sequência invertida
         //for (int i = numElementos-1; i >= 0; i--)
         //	numeros.add(i);
+        
         int[] elementos = new int[numElementos];
         for (int i = 0; i < numElementos; i++) {
             elementos[i] = numeros.get(i);
