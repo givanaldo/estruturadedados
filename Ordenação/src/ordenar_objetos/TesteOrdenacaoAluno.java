@@ -66,7 +66,7 @@ public class TesteOrdenacaoAluno {
         System.out.println("Insertionsort: " + (fim - inicio) + " milisegundos");
 
         inicio = System.currentTimeMillis();
-        Collections.sort(alunos4, new SortByAge());
+        Collections.sort(alunos4, new SortByCurso());
         fim = System.currentTimeMillis();
         System.out.println("Collections.sort: " + (fim - inicio) + " milisegundos");
 

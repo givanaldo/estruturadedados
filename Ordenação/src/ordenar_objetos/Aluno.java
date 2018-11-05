@@ -6,6 +6,10 @@ public class Aluno {
     private String curso;
     private int idade;
 
+    public Aluno() {
+
+    }
+
     public Aluno(String nome, String curso, int idade) {
         this.nome = nome;
         this.curso = curso;
@@ -52,5 +56,4 @@ public class Aluno {
     public String toString() {
         return "- " + nome + "(" + curso + ") - " + idade;
     }
-
 }
