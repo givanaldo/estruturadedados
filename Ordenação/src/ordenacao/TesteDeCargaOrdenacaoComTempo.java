@@ -6,7 +6,7 @@ import java.util.Collections;
 public class TesteDeCargaOrdenacaoComTempo {
 
     public static void main(String[] args) {
-        int numElementos = 10000;
+        int numElementos = 100000;
         ArrayList<Integer> numeros = new ArrayList<>();
 
         // sequência aleatória
@@ -29,22 +29,52 @@ public class TesteDeCargaOrdenacaoComTempo {
 
         vetor = elementos.clone();
         startTime = System.currentTimeMillis();
+        HeapSort.heapsort(vetor);
+        endTime = System.currentTimeMillis();
+        System.out.println("HeapSort: " + (endTime - startTime) + " milisegundos");
+
+        vetor = elementos.clone();
+        startTime = System.currentTimeMillis();
+        HeapSort.heapsort2(vetor);
+        endTime = System.currentTimeMillis();
+        System.out.println("HeapSort 2: " + (endTime - startTime) + " milisegundos");
+
+        vetor = elementos.clone();
+        startTime = System.currentTimeMillis();
+        HeapSort.heapsort3(vetor);
+        endTime = System.currentTimeMillis();
+        System.out.println("HeapSort 3: " + (endTime - startTime) + " milisegundos");        
+        
+        vetor = elementos.clone();
+        startTime = System.currentTimeMillis();
         QuickSort2.quicksort(vetor, 0, vetor.length-1);
         endTime = System.currentTimeMillis();
-        System.out.println("Quicksort (pivô v[0]): " + (endTime - startTime));
+        System.out.println("Quicksort (pivô v[0]): " + (endTime - startTime) + " milisegundos");
 
         vetor = elementos.clone();
         startTime = System.currentTimeMillis();
         QuickSort.quicksort(vetor);
         endTime = System.currentTimeMillis();
-        System.out.println("Quicksort (pivô v[n/2]): " + (endTime - startTime));
+        System.out.println("Quicksort (pivô v[n/2]): " + (endTime - startTime) + " milisegundos");
 
         vetor = elementos.clone();
         startTime = System.currentTimeMillis();
         MergeSort.mergesort(vetor);
         endTime = System.currentTimeMillis();
-        System.out.println("Mergesort: " + (endTime - startTime));
+        System.out.println("Mergesort: " + (endTime - startTime) + " milisegundos");
 
+        vetor = elementos.clone();
+        startTime = System.currentTimeMillis();
+        ShellSort.shellsort(vetor);
+        endTime = System.currentTimeMillis();
+        System.out.println("Shellsort: " + (endTime - startTime) + " milisegundos");        
+
+        vetor = elementos.clone();
+        startTime = System.currentTimeMillis();
+        ShellSort.shellsort2(vetor);
+        endTime = System.currentTimeMillis();
+        System.out.println("Shellsort 2: " + (endTime - startTime) + " milisegundos");        
+        
         vetor = elementos.clone();
         startTime = System.currentTimeMillis();
         Sort.insertionsort(vetor);

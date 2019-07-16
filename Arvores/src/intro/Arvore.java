@@ -45,7 +45,6 @@ public class Arvore {
                 } else {
                     inserir(pai.getEsquerda(), no);
                 }
-
             } else {
                 if (pai.getDireita() == null) {
                     pai.setDireita(no);
