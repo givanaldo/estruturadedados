@@ -1,6 +1,5 @@
 package iniciais;
 
-import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class MediaJOptionPane {
@@ -9,12 +8,11 @@ public class MediaJOptionPane {
 
         double notas[] = new double[4];
         double media = 0.0;
-        Scanner teclado = new Scanner(System.in);
 
         for (int i = 0; i < notas.length; i++) {
-            //System.out.printf("Nota %d: ", (i + 1));
-            //notas[i] = teclado.nextDouble();
-            notas[i] = Double.parseDouble(JOptionPane.showInputDialog("Nota "+ (i+1) + ": ", "digite uma nota"));
+            notas[i] = Double.parseDouble(
+                    JOptionPane.showInputDialog("Nota "+ (i+1) + ": ", 
+                                    "digite uma nota (0 a 10)"));
             media += notas[i];
         }
         media /= 4;
@@ -30,21 +28,20 @@ public class MediaJOptionPane {
                 JOptionPane.INFORMATION_MESSAGE);
         
         
-
         if (media >= 6.0) {
-            System.out.println("Aprovado.");
+            JOptionPane.showMessageDialog(null, "Aprovado.");
         } else if (media >= 3.0) {
-            System.out.println("Recuperação.");
-            System.out.println("Digite a nota da recuperação.");
-            double notaRecuperacao = teclado.nextDouble();
+            JOptionPane.showMessageDialog(null, "Recuperação.");
+            double notaRecuperacao = Double.parseDouble(
+                    JOptionPane.showInputDialog("Digite a nota da recuperação"));
             double mediaFinal = (media + notaRecuperacao) / 2;
             if (mediaFinal >= 6.0) {
-                System.out.println("Aprovado.");
+                JOptionPane.showMessageDialog(null, "Aprovado.");
             } else {
-                System.out.println("Reprovado.");
+                JOptionPane.showMessageDialog(null, "Reprovado.");
             }
         } else {
-            System.out.println("Reprovado.");
+            JOptionPane.showMessageDialog(null, "Reprovado.");
         }
     }
 }
