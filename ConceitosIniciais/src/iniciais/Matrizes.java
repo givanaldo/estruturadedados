@@ -33,7 +33,8 @@ public class Matrizes {
             System.out.print("Aluno " + (i+1) + ": ");
             for (int j=0; j<colunas; j++) 
                 System.out.print(notas[i][j] + " ");
-            System.out.println(" -- Média = " + media[i] + " -- Situação: " + situacao[i]);  
+            System.out.println(" -- Média = " + media[i] + 
+                    " -- Situação: " + situacao[i]);  
         }
     }
 }
