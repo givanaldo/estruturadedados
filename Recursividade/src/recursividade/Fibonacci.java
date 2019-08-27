@@ -1,5 +1,7 @@
 package recursividade;
 
+import java.util.Scanner;
+
 public class Fibonacci {
 
     static long fibonacciRecursivo(int n) {
@@ -24,17 +26,31 @@ public class Fibonacci {
         }
         return j;
     }
+    
+    static long fibonacciDireto(int n) {
+        double raiz5 = Math.sqrt(5);
+        return (long) ((1/raiz5)*(Math.pow((1+raiz5)/2, n) - Math.pow((1-raiz5)/2, n)));
+    }
 
     public static void main(String[] args) {
         long inicio, fim;
-        int nFib = 50;
+        
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Digite um número: ");
+        int nFib = teclado.nextInt();
+        
         inicio = System.currentTimeMillis();
-        System.out.print("\nFibonnaci Iterativo: " + fibonacciIterativo(nFib));
+        System.out.print("\nFibonnaci Direto:    " + fibonacciDireto(nFib));
         fim = System.currentTimeMillis();
         System.out.println(" -- Tempo: " + (fim - inicio) + " mseg");
 
         inicio = System.currentTimeMillis();
-        System.out.print("\nFibonnaci Recursivo: " + fibonacciRecursivo(nFib));
+        System.out.print("Fibonnaci Iterativo: " + fibonacciIterativo(nFib));
+        fim = System.currentTimeMillis();
+        System.out.println(" -- Tempo: " + (fim - inicio) + " mseg");
+
+        inicio = System.currentTimeMillis();
+        System.out.print("Fibonnaci Recursivo: " + fibonacciRecursivo(nFib));
         fim = System.currentTimeMillis();
         System.out.println(" -- Tempo: " + (fim - inicio) + " mseg");
     }

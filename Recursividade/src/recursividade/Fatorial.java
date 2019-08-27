@@ -7,7 +7,7 @@ public class Fatorial {
 
     // função recursiva
     public static double fatorial1(int n) {
-        if (n == 0) {
+        if (n == 1 || n == 0) {
             return 1;
         } else {
             return n * fatorial1(n - 1);
@@ -58,6 +58,7 @@ public class Fatorial {
         fim = System.currentTimeMillis();
         System.out.println(" -- Tempo: " + (fim - inicio) + " mseg");
 
+        
         inicio = System.currentTimeMillis();
         System.out.println("Fatorial recursivo grande = " + fatorial3(n));
         fim = System.currentTimeMillis();
@@ -67,7 +68,7 @@ public class Fatorial {
         System.out.println("Fatorial interativo grande = " + fatorial4(n));
         fim = System.currentTimeMillis();
         System.out.println(" -- Tempo: " + (fim - inicio) + " mseg");
-
+        
     }
 
 }

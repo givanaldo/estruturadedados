@@ -20,7 +20,7 @@ public class Hanoi {
     }
 
     public static void main(String[] args) {
-        int n = 10;
+        int n = 5;
         hanoi(n, 1, 3, 2);
         System.out.println("Movimentos: " + (Math.pow(2, n)-1));
     }
