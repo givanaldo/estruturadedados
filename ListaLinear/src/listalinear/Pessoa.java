@@ -1,5 +1,7 @@
 package listalinear;
 
+import java.util.Objects;
+
 public class Pessoa {
 
     private String nome;
@@ -46,5 +48,5 @@ public class Pessoa {
     public String toString() {
         return "nome=" + nome + ", telefone=" + telefone + ", email=" + email;
     }
-
+    
 }

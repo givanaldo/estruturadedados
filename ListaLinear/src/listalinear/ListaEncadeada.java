@@ -21,7 +21,15 @@ public class ListaEncadeada {
     }
     
     public void adicionaInicio(Pessoa elemento) {
-        
+        Celula celula = new Celula(elemento);
+        if (primeira == null) { 
+            primeira = celula;
+            ultima = celula;
+        }
+        else {
+            celula.setProximo(primeira);
+            primeira = celula;
+        }
     }
     
     public void remover() {

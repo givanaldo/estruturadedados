@@ -23,6 +23,12 @@ public class ListaLinearArrayListMain {
         alunos.add(1, new Pessoa("Alex", "3201-2012", "alex@bol.com.br"));
         for (Pessoa aluno : alunos)
             System.out.println(aluno.toString());
+        
+        alunos.remove(joao);
+        System.out.println("");
+        for (Pessoa aluno : alunos)
+            System.out.println(aluno.toString());
+
     }
     
 }
