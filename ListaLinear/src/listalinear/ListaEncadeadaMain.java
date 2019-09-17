@@ -20,6 +20,10 @@ public class ListaEncadeadaMain {
         alunos.adiciona(new Pessoa("José", "2222-2222", "jose@bol.com.br"));
         alunos.adiciona(new Pessoa("Alex", "3201-2012", "alex@bol.com.br"));
         alunos.listarTodos();
+        
+        System.out.println("");
+        alunos.remover(2);
+        alunos.listarTodos();
     }
     
 }

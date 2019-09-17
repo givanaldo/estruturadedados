@@ -41,14 +41,21 @@ public class ListaContinua {
     }
     
     public Pessoa recuperar(int posicao) {
-        return new Pessoa();
+        return lista[posicao];
     }
     
     public void remover(int posicao) {
-        
+        if (posicao < indice) {
+            for (int i=posicao; i<indice-1; i++)
+                lista[i] = lista[i+1];
+            indice--;
+        }
     }
     
     public boolean contem(Pessoa pessoa) {
+        for (int i=0; i<tamanho(); i++)
+            if (pessoa.equals(lista[i]))
+                return true;
         return false;
     }
     

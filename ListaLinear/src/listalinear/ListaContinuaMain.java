@@ -20,6 +20,17 @@ public class ListaContinuaMain {
         alunos.inserir(new Pessoa("José", "2222-2222", "jose@bol.com.br"));
         alunos.inserir(1, new Pessoa("Alex", "3201-2012", "alex@bol.com.br"));
         alunos.listarTodos();
+        
+        
+        System.out.println("");
+        System.out.println(alunos.recuperar(2));
+        alunos.remover(2);
+        Pessoa busca = new Pessoa("João", "98888-0088", "joao@gmail.com");
+        System.out.println(alunos.contem(busca));
+        
+        System.out.println("");
+        alunos.listarTodos();
+        
     }
     
 }

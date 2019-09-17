@@ -1,18 +1,18 @@
 package listalinear;
 
 public class ListaEncadeada {
-    private Celula primeira;
-    private Celula ultima;
+    private Celula inicio;
+    private Celula fim;
     
     public void adiciona(Pessoa elemento) {
         Celula celula = new Celula(elemento);
-        if (primeira == null) {
-           primeira = celula;
-           ultima = celula;
+        if (inicio == null) {
+           inicio = celula;
+           fim = celula;
         }
         else {
-            ultima.setProximo(celula);
-            ultima = celula;
+            fim.setProximo(celula);
+            fim = celula;
         }
     }
     
@@ -22,22 +22,29 @@ public class ListaEncadeada {
     
     public void adicionaInicio(Pessoa elemento) {
         Celula celula = new Celula(elemento);
-        if (primeira == null) { 
-            primeira = celula;
-            ultima = celula;
+        if (inicio == null) { 
+            inicio = celula;
+            fim = celula;
         }
         else {
-            celula.setProximo(primeira);
-            primeira = celula;
+            celula.setProximo(inicio);
+            inicio = celula;
         }
     }
     
-    public void remover() {
-        
+    public void remover(int posicao) {        
+        if (posicao == 0)
+            inicio = inicio.getProximo();
+        else {
+            Celula aux = inicio;
+            for (int i=1; i<posicao; i++)
+                aux = aux.getProximo();
+            aux.setProximo(aux.getProximo().getProximo());
+        }
     }
     
     public void listarTodos() {
-        Celula aux = primeira;
+        Celula aux = inicio;
         while (aux != null) {
             Pessoa p = aux.getElemento();
             System.out.println(p.toString());

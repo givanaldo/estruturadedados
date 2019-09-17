@@ -12,6 +12,7 @@ public class ListaLinearArrayListMain {
         Pessoa gabriel = new Pessoa("Gabriel", "5555-5555",  "gabriel@uol.com.br");
                 
         ArrayList<Pessoa> alunos = new ArrayList<>();
+        // LinkedList<Pessoa> alunos = new LinkedList<>();
         alunos.add(maria);
         alunos.add(joao);
         alunos.add(gabriel);
