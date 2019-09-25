@@ -14,9 +14,14 @@ public class TesteQueueMain {
         fila.add(5);
         fila.add(7);
         fila.add(9);
-        System.out.println(fila.peek());
-        for (int i=0; i<4; i++)
-            System.out.println(fila.remove());        
+        System.out.println(fila.peek() + "\n");
+        System.out.println(fila.remove() + "\n");
+        fila.add(10);
+        
+        for (int i=0; i<5; i++)
+            System.out.println(fila.remove());   
+        
+        
     }
     
 }
