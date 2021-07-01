@@ -3,12 +3,10 @@ package fibonacci;
 public class Fibonacci {
 
     static long fibonacciRecursivo(int n) {
-        if (n == 0) {
+        if (n == 0)
             return 0;
-        }
-        if (n == 1) {
+        if (n == 1)
             return 1;
-        }
         return fibonacciRecursivo(n - 1) + fibonacciRecursivo(n - 2);
     }
 

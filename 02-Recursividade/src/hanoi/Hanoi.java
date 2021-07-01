@@ -11,17 +11,17 @@ public class Hanoi {
     // O = pino origem
     // D = pino destino
     // T = pino de trabalho
-    public static void hanoi(int n, int O, int D, int T) {
+    public static void hanoi(int n, int O, int T, int D) {
         if (n > 0) {
-            hanoi(n - 1, O, T, D);
+            hanoi(n - 1, O, D, T);
             mover(O, D);
-            hanoi(n - 1, T, D, O);
+            hanoi(n - 1, T, O, D);
         }
     }
 
     public static void main(String[] args) {
-        int n = 5;
-        hanoi(n, 1, 3, 2);
+        int n = 3;
+        hanoi(n, 1, 2, 3);
         System.out.println("Movimentos: " + (Math.pow(2, n)-1));
     }
 
