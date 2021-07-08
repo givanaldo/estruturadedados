@@ -12,6 +12,15 @@ public class Fatorial {
             return n * fatorial1(n - 1);
         }
     }
+    // função recursiva usando BigInteger
+    public static BigInteger fatorial3(int n) {
+        if (n == 0) {
+            return BigInteger.ONE;
+        } else {
+        	BigInteger m = BigInteger.valueOf(n);
+        	return m.multiply(fatorial3(n - 1));
+        }
+    }
 
     // função interativa
     public static double fatorial2(int n) {
@@ -20,15 +29,6 @@ public class Fatorial {
             fat = fat * i;
         }
         return fat;
-    }
-
-    // função recursiva usando BigInteger
-    public static BigInteger fatorial3(int n) {
-        if (n == 0) {
-            return BigInteger.ONE;
-        }
-        BigInteger m = BigInteger.valueOf(n);
-        return m.multiply(fatorial3(n - 1));
     }
 
     // função interativa usando BigInteger

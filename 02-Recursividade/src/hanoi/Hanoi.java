@@ -8,9 +8,7 @@ public class Hanoi {
     }
 
     // Método que implementa a recursão
-    // O = pino origem
-    // D = pino destino
-    // T = pino de trabalho
+    // O = pino origem ## D = pino destino ## T = pino de trabalho
     public static void hanoi(int n, int O, int T, int D) {
         if (n > 0) {
             hanoi(n - 1, O, D, T);
@@ -24,5 +22,4 @@ public class Hanoi {
         hanoi(n, 1, 2, 3);
         System.out.println("Movimentos: " + (Math.pow(2, n)-1));
     }
-
 }
