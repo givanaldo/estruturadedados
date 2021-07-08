@@ -30,9 +30,9 @@ public class MergeSort {
         int rightIndex = 0;
         int wholeIndex = 0;
 
-        // As long as neither the left nor the right array has
-        // been used up, keep taking the smaller of left[leftIndex]
-        // or right[rightIndex] and adding it at both[bothIndex].
+        // Enquanto houverem elementos nos conjuntos (esquerdo e direito),
+        // continue retirando o menor valor entre left[leftIndex] e
+        // right[rightIndex] e adicionando em both[bothIndex].
         while (leftIndex < left.length && rightIndex < right.length) {
             if (left[leftIndex] < right[rightIndex]) {
                 whole[wholeIndex] = left[leftIndex];
@@ -47,17 +47,17 @@ public class MergeSort {
         int[] rest;
         int restIndex;
         if (leftIndex >= left.length) {
-            // The left array has been use up...
+            // O conjunto esquerdo foi usado...
             rest = right;
             restIndex = rightIndex;
         } else {
-            // The right array has been used up...
+            // O conjunto direito foi usado...
             rest = left;
             restIndex = leftIndex;
         }
 
-        // Copy the rest of whichever array (left or right) was
-        // not used up.
+        // Copie o restante do conjunto (esquerdo ou direito) 
+        // que não foi usado.
         for (int i = restIndex; i < rest.length; i++) {
             whole[wholeIndex] = rest[i];
             wholeIndex++;
