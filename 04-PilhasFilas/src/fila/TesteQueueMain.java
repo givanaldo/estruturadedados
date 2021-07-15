@@ -18,7 +18,7 @@ public class TesteQueueMain {
         System.out.println(fila.remove() + "\n");
         fila.add(10);
         
-        for (int i=0; i<5; i++)
+        for (int i=0; i<fila.size(); i++)
             System.out.println(fila.remove());   
         
         

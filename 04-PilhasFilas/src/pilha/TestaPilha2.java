@@ -1,6 +1,8 @@
 package pilha;
 
-public class TestaPilha {
+import java.util.Stack;
+
+public class TestaPilha2 {
     
     public static void main(String[] args) {
         Pessoa joao = new Pessoa("João", "98888-0088", "joao@gmail.com");
@@ -9,19 +11,17 @@ public class TestaPilha {
         Pessoa jose = new Pessoa("José", "2222-2222", "jose@bol.com.br");
         Pessoa alex = new Pessoa("Alex", "3201-2012", "alex@bol.com.br");
         
-        Pilha pilha = new Pilha();
+        Stack<Pessoa> pilha = new Stack<>();
         
         pilha.push(maria);
         pilha.push(jose);
         pilha.push(joao);
         pilha.push(gabriel);
-        pilha.listAll();
-        
-        System.out.println("");
+
         System.out.println("retirando: " + pilha.pop());
         System.out.println("retirando: " + pilha.pop());
-        System.out.println("");
-        pilha.listAll();
+        System.out.println("topo: " + pilha.peek());
+
     }
     
 }
