@@ -26,7 +26,8 @@ public class Main {
 
         Ordenacao.insertionsortPorMédia(alunos1);
         Ordenacao.insertionsortPorNome(alunos2);
-        Collections.sort(alunos3, new SortByNome());
+        
+        Collections.sort(alunos3, new SortByMédia());
 
         listar(alunos1, "Alunos ordenados por média");
         listar(alunos2, "Alunos ordenados por nome");

@@ -14,7 +14,7 @@ public class QuicksortPivoFinal {
             return;
         }
 
-        // selecionar pivô (início)
+        // selecionar pivô (fim)
         int pivot = v[right];
 
         // esquerda < pivô e direita > pivô

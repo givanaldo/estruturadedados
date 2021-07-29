@@ -18,7 +18,7 @@ public class QuicksortPivoAleatorio {
 
         // selecionar pivô (aleatorio)
         Random random = new Random();
-        int pos = random.nextInt((right - left) + 1) + left;
+        int pos = left + random.nextInt((right - left) + 1);
         int pivot = v[pos];
 
         // esquerda < pivô e direita > pivô

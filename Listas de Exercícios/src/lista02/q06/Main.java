@@ -11,6 +11,7 @@ public class Main {
         
         System.out.print("Palavra: ");
         String palavra = teclado.next();
+              
         char[] letras = palavra.toCharArray();
 
         Bubblesort.sort(letras);

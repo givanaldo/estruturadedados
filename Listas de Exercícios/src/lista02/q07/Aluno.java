@@ -49,7 +49,7 @@ public class Aluno {
     }
 
     public float comparePorMédia(Aluno a) {
-        return this.média - a.média;
+        return a.média - this.média;
     }
 
     @Override

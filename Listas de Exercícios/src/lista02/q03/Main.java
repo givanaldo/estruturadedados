@@ -1,4 +1,4 @@
-package lista02.q04;
+package lista02.q03;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,18 +6,15 @@ import java.util.Collections;
 public class Main {
 
     public static void main(String[] args) {
-        int numElementos = 100000;
+        int numElementos = 1000;
+        //int numElementos = 10000;
+        //int numElementos = 100000;
         ArrayList<Integer> numeros = new ArrayList<>();
 
         // sequência aleatória
-        for (int i = 0; i < numElementos; i++) {
+        for (int i = 0; i < numElementos; i++)
             numeros.add(i);
-        }
         Collections.shuffle(numeros);
-
-        // sequência invertida
-        //for (int i = numElementos-1; i >= 0; i--)
-        //	numeros.add(i);
         
         int[] elementos = new int[numElementos];
         for (int i = 0; i < numElementos; i++) {
@@ -29,32 +26,32 @@ public class Main {
 
         vetor = elementos.clone();
         startTime = System.currentTimeMillis();
-        HeapSort.heapsort(vetor);
+        lista02.q02.Quicksort.sort(vetor);
         endTime = System.currentTimeMillis();
-        System.out.println("HeapSort 1: " + (endTime - startTime) + " milisegundos");
+        System.out.println("Quicksort (pivô início): " + (endTime - startTime) + " milisegundos");
 
         vetor = elementos.clone();
         startTime = System.currentTimeMillis();
-        HeapSort.heapsort2(vetor);
+        lista02.q02.MergeSort.sort(vetor);
         endTime = System.currentTimeMillis();
-        System.out.println("HeapSort 2: " + (endTime - startTime) + " milisegundos");
+        System.out.println("Mergesort: " + (endTime - startTime) + " milisegundos");
 
         vetor = elementos.clone();
         startTime = System.currentTimeMillis();
-        HeapSort.heapsort3(vetor);
+        lista02.q02.Insertionsort.sort(vetor);
         endTime = System.currentTimeMillis();
-        System.out.println("HeapSort 3: " + (endTime - startTime) + " milisegundos");        
-        
-        vetor = elementos.clone();
-        startTime = System.currentTimeMillis();
-        ShellSort.shellsort(vetor);
-        endTime = System.currentTimeMillis();
-        System.out.println("Shellsort 1: " + (endTime - startTime) + " milisegundos");        
+        System.out.println("Insertionsort: " + (endTime - startTime) + " milisegundos");
 
         vetor = elementos.clone();
         startTime = System.currentTimeMillis();
-        ShellSort.shellsort2(vetor);
+        lista02.q02.Selectionsort.sort(vetor);
         endTime = System.currentTimeMillis();
-        System.out.println("Shellsort 2: " + (endTime - startTime) + " milisegundos");                
+        System.out.println("Selectionsort: " + (endTime - startTime) + " milisegundos");
+
+        vetor = elementos.clone();
+        startTime = System.currentTimeMillis();
+        lista02.q02.Bubblesort.sort(vetor);
+        endTime = System.currentTimeMillis();
+        System.out.println("Bubblesort: " + (endTime - startTime) + " milisegundos");
     }
 }
