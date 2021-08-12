@@ -1,4 +1,4 @@
-package listalinear;
+package encadeada;
 
 public class ListaContinua {
     private int tamMax;
