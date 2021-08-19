@@ -19,7 +19,7 @@ public class ListaLinearArrayListMain {
 		System.out.println("");
 
 		alunos.add(new Pessoa("José", "2222-2222", "jose@bol.com.br"));
-		alunos.add(1, new Pessoa("Alex", "3201-2012", "alex@bol.com.br"));
+		alunos.add(new Pessoa("Alex", "3201-2012", "alex@bol.com.br"));
 		for (Pessoa aluno : alunos)
 			System.out.println(aluno.toString());
 

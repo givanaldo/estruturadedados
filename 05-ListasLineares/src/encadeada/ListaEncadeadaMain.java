@@ -15,13 +15,14 @@ public class ListaEncadeadaMain {
 		alunos.listarTodos();
 		System.out.println("");
 
+		alunos.adiciona(5, new Pessoa("Rildo", "555-2222", "rildo@msn.com"));
 		alunos.adiciona(new Pessoa("José", "2222-2222", "jose@bol.com.br"));
 		alunos.adiciona(new Pessoa("Alex", "3201-2012", "alex@bol.com.br"));
 		alunos.listarTodos();
 
-		System.out.println("");
-		alunos.remover(2);
-		alunos.listarTodos();
+		//System.out.println("");
+		//alunos.remover(2);
+		//alunos.listarTodos();
 	}
 
 }

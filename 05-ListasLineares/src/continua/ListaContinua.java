@@ -3,10 +3,10 @@ package continua;
 public class ListaContinua {
     private int tamMax;
     private int indice;
-    private Pessoa lista[];
+    private Pessoa lista[]; // array
 
     public ListaContinua() {
-        this.tamMax = 10;
+        this.tamMax = 100;
         this.indice = 0;
         this.lista = new Pessoa[this.tamMax];
     }

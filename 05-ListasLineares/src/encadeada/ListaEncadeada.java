@@ -16,7 +16,22 @@ public class ListaEncadeada {
 	}
 
 	public void adiciona(int posicao, Pessoa elemento) {
-
+		Celula celula = new Celula(elemento);
+		if (inicio == null) { // lista vazia
+			inicio = celula;
+			fim = celula;
+		} else {
+			if (posicao == 0) {
+				celula.setProximo(inicio);
+				inicio = celula;
+			} else {
+				Celula aux = inicio;
+				for (int i = 1; i < posicao; i++)
+					aux = aux.getProximo();
+				celula.setProximo(aux.getProximo());
+				aux.setProximo(celula);
+			}
+		}
 	}
 
 	public void adicionaInicio(Pessoa elemento) {
