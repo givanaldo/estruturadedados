@@ -38,7 +38,7 @@ public class Carro {
 
     @Override
     public String toString() {
-        return "Carro{" + "nome=" + nome + ", marca=" + marca + ", ano=" + ano + '}';
+        return nome + ": " + marca + ", " + ano;
     }
     
     
